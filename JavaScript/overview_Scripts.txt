@@ -1,0 +1,9 @@
+Script
+=====
+Its a unit of code
+1.ClientSide Script
+Script get executed with in browser
+ex: Javascript,VBScript,JScript
+2.ServerSide Script
+Scripts get executed in webserver(Apache,IIS,ngInx etc)
+ex:PHP,Asp.net,JSP,Asp.net Core,NodeJs
