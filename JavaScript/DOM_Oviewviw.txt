@@ -1,0 +1,10 @@
+HTML DOM
+======
+with the HTML DOM, Javascript can access and change all the elements of HTML
+It can chage attributes of HTML elements
+It can chage CSS styles.
+It can remove existing elements and attributes
+It can react to all existing HTML events
+What is DOM
+==========
+DOM stands for Document Object Model

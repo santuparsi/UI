@@ -1,0 +1,21 @@
+<!-- GetElementsByTagName -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Finding Elements by Tag Name</p>
+    <p>I can access by <b>Javascript DOM</b></p>
+    <p id='intro'></p>
+    <p id='demo'></p>
+    <script>
+        let ele=document.getElementsByTagName('p');
+        document.getElementById('intro').innerHTML='The text in the First paragraph: '+ele[0].innerHTML;
+        document.getElementById('demo').innerHTML='The text in the 2nd paragraph: '+ele[1].innerHTML;
+    </script>
+</body>
+</html>
