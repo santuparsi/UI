@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span
+        {
+            color: red;
+        }
+    </style>
+    <script>
+        function GreetUser()
+        {
+            let n=document.getElementById('t1').value; //return value of t1 textbox
+            document.getElementById('s1').innerHTML='';
+            if(n!="")
+            {
+           
+            alert('Hello '+n);
+            }
+            else
+            document.getElementById('s1').innerHTML='Pls Enter Name';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Enter Name</th>
+                <td><input id='t1'></td>
+                <td><input type="button" value="Greet" onclick="GreetUser()"> </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <span id='s1'></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

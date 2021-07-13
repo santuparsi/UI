@@ -20,6 +20,10 @@
     <script>
         let x=document.getElementsByClassName('intro'); //returns array of elements
         document.getElementById('demo').innerHTML=x[1].innerHTML;
+        for(let i=0;i<x.length;i++)
+        {
+            document.write(x[i].innerHTML);
+        }
     </script>
 </body>
 </html>
