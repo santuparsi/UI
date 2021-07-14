@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        ResizeImg=()=>{
+            document.images[0].width=200;
+            document.images[0].height=200;
+            document.images[0].src='download1.jpg'
+        }
+        SetSizeImg=()=>{
+            document.images[0].width=400;
+            document.images[0].height=400;
+        }
+        f=()=>{
+            document.getElementById('h1').style.color='red';
+        }
+    </script>
+</head>
+<body>
+    <img src="./download.jpg" width="400" height="400" onmouseover="ResizeImg()" onmouseout="SetSizeImg()">
+    <h1 onmouseover="f()" id='h1'>I am Header</h1>
+</body>
+</html>

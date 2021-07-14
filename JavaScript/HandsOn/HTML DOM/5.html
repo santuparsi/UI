@@ -19,11 +19,16 @@
     <h1 id='demo1'></h1>
     <script>
         let x=document.getElementsByClassName('intro'); //returns array of elements
-        document.getElementById('demo').innerHTML=x[1].innerHTML;
-        for(let i=0;i<x.length;i++)
-        {
-            document.write(x[i].innerHTML);
-        }
+        document.getElementById('demo').innerHTML='The text in the h1: '+x[1].innerHTML;
+        let obj=document.getElementById('demo');
+        obj.innerHTML=x[1].innerHTML;
+      //  let s="";
+        // for(let i=0;i<x.length;i++)
+        // {
+        //     //document.write(x[i].innerHTML);
+        //     s+=x[i].innerHTML+"<Br>"
+        // }
+        // document.write(s);
     </script>
 </body>
 </html>
