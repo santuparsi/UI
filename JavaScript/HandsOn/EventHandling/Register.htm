@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    span
+    {
+        color: red;
+    }
+</style>
+<script>
+    Validate=()=>{
+       
+        if(ValidateId()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errId').innerHTML='Pls Enter Valid Id';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errId').innerHTML='';}
+        if(ValidateName()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errName').innerHTML='Pls Enter Valid Name';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errName').innerHTML='';}
+        if(ValidateEmail()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errEmail').innerHTML='Pls Ener Valid Email';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errEmail').innerHTML='';}
+        if(ValidateMobile()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errMobile').innerHTML='Pls Ener Valid Mobile';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errMobile').innerHTML='';}
+        if(ValidateAge()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errAge').innerHTML='Age should be >18';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errAge').innerHTML='';}
+        if(ValidatePassword()==false)
+        {
+           // alert("Pls Enter Valid Id");
+           document.getElementById('errPwd').innerHTML='Pls Enter valid Password';
+            event.preventDefault();
+        }
+        else{ document.getElementById('errPwd').innerHTML='';}
+        function ValidateId(){
+            var Reg=new RegExp('^U[0-9]{3}$')
+            let Uid=document.getElementById('txtId').value;
+            let result=Reg.test(Uid); //test returns true when input value match with expression or else return false.
+            //alert(result);
+            return result;
+
+        }
+        function ValidateName(){
+            var Reg=new RegExp('^[A-Za-z]{2,}$')
+            let Uname=document.getElementById('txtName').value;
+            let result=Reg.test(Uname); //test returns true when input value match with expression or else return false.
+            //alert(result);
+            return result;
+
+        }
+        function ValidateEmail(){
+            var Reg=new RegExp('^[a-z]{1}[a-z0-9]+@[a-z]{2,}.[a-z]{2,3}$')
+            let Email=document.getElementById('txtEmail').value;
+            let result=Reg.test(Email); //test returns true when input value match with expression or else return false.
+            //alert(result);
+            return result;
+
+        }
+        function ValidateMobile(){
+            var Reg=new RegExp('^[6789]{1}[0-9]{9}$')
+            let Mobile=document.getElementById('txtMobile').value;
+            let result=Reg.test(Mobile); //test returns true when input value match with expression or else return false.
+            //alert(result);
+            return result;
+
+        }
+        function ValidateAge(){
+           
+            let age=document.getElementById('txtAge').value;
+          if(age<18)
+            return false;
+
+        }
+        function ValidatePassword(){
+            var Reg=new RegExp('^[A-Za-z0-9]{6,8}$')
+            let Pwd=document.getElementById('txtPwd').value;
+            let result=Reg.test(Pwd); //test returns true when input value match with expression or else return false.
+            //alert(result);
+            return result;
+
+        }
+    }
+</script>
+<body>
+  <form id='form1' onsubmit="Validate()" action="http://www.google.co.in">
+    <div class="container">
+        <table class="table table-boardered" style="width: 500px;margin:30px;">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" id='txtId'>
+                <span id='errId'></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id='txtName'>
+                    <span id='errName'></span>
+                </td>
+            </tr>
+            <tr>
+                <td>EmailId</td>
+                <td><input type="text" id='txtEmail'>
+                    <span id='errEmail'></span>
+                </td>
+            </tr>
+            <tr>
+                <td>MobileNo</td>
+                <td><input type="text" id='txtMobile'>
+                    <span id='errMobile'></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="text" id='txtAge'>
+                    <span id='errAge'></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id='txtPwd'>
+                    <span id='errPwd'></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </div>
+  </form>
+</body>
+</html>
