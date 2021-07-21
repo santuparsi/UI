@@ -1,0 +1,43 @@
+<h2>Add Student Details</h2>
+<div class="container">
+    <table class="table table-borderd">
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" [(ngModel)]="item.studentId">
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" [(ngModel)]="item.studentName">
+            </td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>
+                <input type="text" [(ngModel)]="item.age">
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+            <select [(ngModel)]="item.address">
+                <option *ngFor="let item of cities">{{item}}</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button>Register</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+    JSON:
+    <pre>
+      
+        {{item|json}}
+    </pre>
+</div>

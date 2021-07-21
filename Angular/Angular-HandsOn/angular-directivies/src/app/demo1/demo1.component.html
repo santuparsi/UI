@@ -1,0 +1,17 @@
+<div class="container">
+    Select No:<select [(ngModel)]="selectedNo">
+        <option *ngFor="let item of nos">{{item}}</option>
+    </select>
+    <span [ngSwitch]="selectedNo">
+    <p *ngSwitchCase="1">
+    Selected 1
+    </p>
+    <p *ngSwitchCase="2">
+    Selected 2
+    </p>
+    <p *ngSwitchDefault>
+    Come back!!
+    </p>
+    </span>
+
+</div>

@@ -1,0 +1,12 @@
+span
+{
+    color: red;
+}
+table
+{
+    width: 300px;
+    height: 200px;
+}
+td{
+    text-align: center;
+}
